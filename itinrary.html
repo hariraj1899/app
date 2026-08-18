@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Packing List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased min-h-screen">
+
+  <!-- Main Container -->
+  <main class="max-w-4xl mx-auto px-6 py-10">
+
+    <!-- Top Header & Action -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-black tracking-tight mb-1">
+          Smart Packing List 🧳
+        </h1>
+        <p class="text-xs sm:text-sm text-gray-500 font-normal">
+          Customized checklist for Paris, France • 3 Days • Moderate Weather
+        </p>
+      </div>
+
+      <button class="h-11 px-5 bg-black hover:bg-gray-800 text-white font-semibold text-xs rounded-[12px] flex items-center justify-center gap-2 transition-colors self-start sm:self-auto shrink-0">
+        <span>📥</span> Export PDF
+      </button>
+    </div>
+
+    <!-- Progress Card -->
+    <div class="border border-gray-200/90 rounded-[20px] p-6 mb-6 bg-white shadow-sm">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-xs font-bold text-black tracking-wide uppercase">Packing Progress</span>
+        <span class="text-xs font-bold text-black">3 / 10 packed (30%)</span>
+      </div>
+      <div class="w-full bg-gray-100 h-2.5 rounded-full overflow-hidden">
+        <div class="bg-black h-full rounded-full transition-all duration-300 w-[30%]"></div>
+      </div>
+    </div>
+
+    <!-- Add Item Bar -->
+    <form class="flex items-center gap-3 mb-8" onsubmit="event.preventDefault();">
+      <input 
+        type="text" 
+        placeholder="Add custom item (e.g., Extra Camera Battery)" 
+        class="flex-1 h-12 px-4 border border-gray-200 rounded-[14px] text-xs sm:text-sm focus:outline-none focus:border-black transition-colors placeholder:text-gray-400"
+      >
+      <button 
+        type="submit" 
+        class="h-12 px-6 bg-black hover:bg-gray-800 text-white font-semibold text-xs rounded-[14px] transition-colors shrink-0"
+      >
+        Add Item
+      </button>
+    </form>
+
+    <!-- 2x2 Grid Categories -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+      <!-- Category 1 -->
+      <div class="border border-gray-200/90 rounded-[20px] p-6 bg-white shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2.5 mb-5 pb-3 border-b border-gray-100">
+            <span class="text-xl leading-none">📄</span>
+            <h3 class="font-bold text-sm text-black tracking-tight">Essentials & Documents</h3>
+          </div>
+          <div class="space-y-3.5">
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" checked class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-400 line-through transition-colors">Passport & ID cards</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" checked class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-400 line-through transition-colors">Flight tickets & Hotel bookings</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">Travel Insurance card</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">Credit cards & Euros cash</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="border border-gray-200/90 rounded-[20px] p-6 bg-white shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2.5 mb-5 pb-3 border-b border-gray-100">
+            <span class="text-xl leading-none">👕</span>
+            <h3 class="font-bold text-sm text-black tracking-tight">Clothing & Apparel</h3>
+          </div>
+          <div class="space-y-3.5">
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" checked class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-400 line-through transition-colors">Comfortable walking shoes</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">3x Casual T-Shirts / Tops</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">1x Dinner / Evening Outfit</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">Light Jacket or Trench Coat</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="border border-gray-200/90 rounded-[20px] p-6 bg-white shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2.5 mb-5 pb-3 border-b border-gray-100">
+            <span class="text-xl leading-none">🔌</span>
+            <h3 class="font-bold text-sm text-black tracking-tight">Electronics</h3>
+          </div>
+          <div class="space-y-3.5">
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">Universal Power Adapter (EU type)</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">Phone Chargers & Powerbank</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">Headphones / Earbuds</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="border border-gray-200/90 rounded-[20px] p-6 bg-white shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2.5 mb-5 pb-3 border-b border-gray-100">
+            <span class="text-xl leading-none">🧴</span>
+            <h3 class="font-bold text-sm text-black tracking-tight">Toiletries & Care</h3>
+          </div>
+          <div class="space-y-3.5">
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">Travel-size Toothbrush & Paste</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">Sunscreen & Moisturizer</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded accent-black cursor-pointer">
+              <span class="text-xs font-normal text-gray-700 group-hover:text-black transition-colors">Personal Medications</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
