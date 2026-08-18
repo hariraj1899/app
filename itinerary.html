@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Trip - AI Travel Planner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+  <!-- Header Navigation -->
+  <header class="flex items-center justify-between px-8 py-4 bg-white border-b border-gray-100">
+    <div class="flex items-center space-x-2">
+      <div class="w-10 h-10 rounded-full flex items-center justify-center text-2xl"></div>
+    </div>
+    
+    <div class="flex items-center space-x-3">
+      <button class="px-4 py-2 text-xs font-semibold border border-gray-300 rounded-full hover:bg-gray-50 transition">+ Create Trip</button>
+      <button class="px-4 py-2 text-xs font-semibold border border-gray-300 rounded-full hover:bg-gray-50 transition">My Trips</button>
+      <div class="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-xs">H</div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-10">
+
+    <!-- Trip Banner & Info Header -->
+    <div class="space-y-4">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80" alt="Destination" class="h-[340px] w-full object-cover rounded-3xl shadow-sm">
+
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+        <div>
+          <h1 class="text-3xl font-extrabold text-black">Paris, France 🇫🇷</h1>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-xs font-medium">📅 3 Days</span>
+            <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-xs font-medium">💰 Moderate Budget</span>
+            <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-xs font-medium">🥂 2 Travelers</span>
+            <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-xs font-medium">💖 Romantic Mood</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel Recommendations -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold text-black mb-6">Hotel Recommendation</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Hotel Card 1 -->
+        <div class="border border-gray-200/90 rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" class="h-44 w-full object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-base text-black">Hotel Le Meurice</h3>
+            <p class="text-xs text-gray-500 mt-1">📍 228 Rue de Rivoli, Paris</p>
+            <p class="text-xs font-semibold text-black mt-2">💵 $250 / night</p>
+            <p class="text-xs text-yellow-600 font-bold mt-1">⭐ 4.8 Rating</p>
+          </div>
+        </div>
+
+        <!-- Hotel Card 2 -->
+        <div class="border border-gray-200/90 rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" class="h-44 w-full object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-base text-black">Pullman Paris Tour Eiffel</h3>
+            <p class="text-xs text-gray-500 mt-1">📍 18 Avenue de Suffren, Paris</p>
+            <p class="text-xs font-semibold text-black mt-2">💵 $190 / night</p>
+            <p class="text-xs text-yellow-600 font-bold mt-1">⭐ 4.6 Rating</p>
+          </div>
+        </div>
+
+        <!-- Hotel Card 3 -->
+        <div class="border border-gray-200/90 rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" class="h-44 w-full object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-base text-black">Citadines Saint-Germain</h3>
+            <p class="text-xs text-gray-500 mt-1">📍 53 Ter Quai des Grands, Paris</p>
+            <p class="text-xs font-semibold text-black mt-2">💵 $140 / night</p>
+            <p class="text-xs text-yellow-600 font-bold mt-1">⭐ 4.4 Rating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day-by-Day Itinerary -->
+    <section class="mt-14">
+      <h2 class="text-2xl font-bold text-black mb-6">Places to Visit</h2>
+
+      <!-- Day 1 -->
+      <div class="mb-10">
+        <h3 class="text-lg font-extrabold text-black mb-4">Day 1 - Classic Paris Landmarks</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Place 1 -->
+          <div class="border border-gray-200/90 rounded-2xl p-4 flex gap-4 hover:border-black transition">
+            <img src="https://images.unsplash.com/photo-1543349689-9a4d426bee8e?auto=format&fit=crop&w=400&q=80" class="w-32 h-32 rounded-xl object-cover flex-shrink-0">
+            <div class="flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold text-red-500">🌅 Morning</span>
+                <h4 class="font-bold text-base text-black mt-0.5">Eiffel Tower Visit</h4>
+                <p class="text-xs text-gray-500 mt-1 line-clamp-2">Enjoy sunrise views and walk around Champ de Mars.</p>
+              </div>
+              <div class="mt-2">
+                <span class="text-xs font-semibold text-black">🎟️ €28 per person</span>
+                <span class="text-[11px] text-gray-400 block mt-0.5">⏱️ 2 Hours</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Place 2 -->
+          <div class="border border-gray-200/90 rounded-2xl p-4 flex gap-4 hover:border-black transition">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=400&q=80" class="w-32 h-32 rounded-xl object-cover flex-shrink-0">
+            <div class="flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold text-blue-500">🌆 Afternoon</span>
+                <h4 class="font-bold text-base text-black mt-0.5">Louvre Museum</h4>
+                <p class="text-xs text-gray-500 mt-1 line-clamp-2">Explore iconic artworks including the Mona Lisa.</p>
+              </div>
+              <div class="mt-2">
+                <span class="text-xs font-semibold text-black">🎟️ €17 per person</span>
+                <span class="text-[11px] text-gray-400 block mt-0.5">⏱️ 3 Hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div>
+        <h3 class="text-lg font-extrabold text-black mb-4">Day 2 - Romantic Walks & Sunset Cruise</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Place 1 -->
+          <div class="border border-gray-200/90 rounded-2xl p-4 flex gap-4 hover:border-black transition">
+            <img src="https://images.unsplash.com/photo-1509299349698-dd22323b5963?auto=format&fit=crop&w=400&q=80" class="w-32 h-32 rounded-xl object-cover flex-shrink-0">
+            <div class="flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold text-amber-500">🌇 Evening</span>
+                <h4 class="font-bold text-base text-black mt-0.5">Seine River Dinner Cruise</h4>
+                <p class="text-xs text-gray-500 mt-1 line-clamp-2">Romantic dinner boat cruise past illuminated landmarks.</p>
+              </div>
+              <div class="mt-2">
+                <span class="text-xs font-semibold text-black">🎟️ €85 per person</span>
+                <span class="text-[11px] text-gray-400 block mt-0.5">⏱️ 2.5 Hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
