@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Trip - AI Travel Planner</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-8 py-4 bg-white border-b border-gray-100">
+    <div class="flex items-center space-x-2">
+      <div class="w-10 h-10 rounded-full flex items-center justify-center text-2xl"></div>
+    </div>
+    
+    <div class="flex items-center space-x-3">
+      <button class="px-4 py-2 text-xs font-semibold border border-gray-300 rounded-full hover:bg-gray-50 transition">
+        + Create Trip
+      </button>
+      <button class="px-4 py-2 text-xs font-semibold border border-gray-300 rounded-full hover:bg-gray-50 transition">
+        My Trips
+      </button>
+      <div class="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-xs">
+        H
+      </div>
+    </div>
+  </header>
+
+  <!-- Form Container -->
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-extrabold text-black mb-2">Tell us your travel preferences 🏕️🌴</h1>
+    <p class="text-gray-500 text-sm mb-10">
+      Just provide some basic information, and our trip planner will generate a customized itinerary based on your preferences.
+    </p>
+
+    <form class="space-y-8">
+      <!-- Destination Input -->
+      <div>
+        <label class="block text-lg font-bold text-black mb-2">What is destination of choice?</label>
+        <div class="relative">
+          <input type="text" placeholder="Select..." class="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:border-black text-sm">
+          <div class="absolute right-3 top-3.5 text-gray-400 pointer-events-none text-xs">▼</div>
+        </div>
+      </div>
+
+      <!-- Days Input -->
+      <div>
+        <label class="block text-lg font-bold text-black mb-2">How many days are you planning your trip?</label>
+        <input type="number" placeholder="Ex.4" class="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:border-black text-sm">
+      </div>
+
+      <!-- Budget Selection -->
+      <div>
+        <label class="block text-lg font-bold text-black mb-4">What is Your Budget?</label>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="p-4 border border-gray-200 rounded-xl cursor-pointer hover:border-black hover:shadow-sm transition">
+            <div class="text-2xl mb-2">💵</div>
+            <h3 class="font-bold text-base text-black">Cheap</h3>
+            <p class="text-xs text-gray-500">Stay conscious of costs</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-xl cursor-pointer hover:border-black hover:shadow-sm transition">
+            <div class="text-2xl mb-2">💰</div>
+            <h3 class="font-bold text-base text-black">Moderate</h3>
+            <p class="text-xs text-gray-500">Keep cost on the average side</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-xl cursor-pointer hover:border-black hover:shadow-sm transition">
+            <div class="text-2xl mb-2">💸</div>
+            <h3 class="font-bold text-base text-black">Luxury</h3>
+            <p class="text-xs text-gray-500">Dont worry about cost</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Companion Selection -->
+      <div>
+        <label class="block text-lg font-bold text-black mb-4">Who do you plan on traveling with on your next adventure?</label>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="p-4 border border-gray-200 rounded-xl cursor-pointer hover:border-black hover:shadow-sm transition">
+            <div class="text-2xl mb-2">✈️</div>
+            <h3 class="font-bold text-base text-black">Just Me</h3>
+            <p class="text-xs text-gray-500">A sole traveles in exploration</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-xl cursor-pointer hover:border-black hover:shadow-sm transition">
+            <div class="text-2xl mb-2">🥂</div>
+            <h3 class="font-bold text-base text-black">A Couple</h3>
+            <p class="text-xs text-gray-500">Two traveles in tandem</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-xl cursor-pointer hover:border-black hover:shadow-sm transition">
+            <div class="text-2xl mb-2">🏡</div>
+            <h3 class="font-bold text-base text-black">Family</h3>
+            <p class="text-xs text-gray-500">A group of fun loving adv</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-xl cursor-pointer hover:border-black hover:shadow-sm transition">
+            <div class="text-2xl mb-2">⛵</div>
+            <h3 class="font-bold text-base text-black">Friends</h3>
+            <p class="text-xs text-gray-500">A bunch of thrill-seekes</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex justify-end pt-4">
+        <button type="button" class="bg-black text-white px-6 py-2.5 rounded-md font-semibold text-xs hover:bg-gray-800 transition">
+          Generate Trip
+        </button>
+      </div>
+    </form>
+  </main>
+
+</body>
+</html>
